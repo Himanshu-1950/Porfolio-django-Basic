@@ -1,0 +1,134 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects - Himanshu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Inline styles (same as index.html & about.html) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav h1 {
+      font-size: 24px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #007bff;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Himanshu</h1>
+      <ul>
+        <div style="text-align: center; margin-top: 40px;">
+
+          <a href="{% url 'home' %}" style="text-decoration: none;">
+            <button style="padding: 10px 20px; font-size: 16px; margin: 10px; background-color: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer;">
+              Home
+            </button>
+          </a>
+
+          <a href="{% url 'about' %}" style="text-decoration: none;">
+            <button style="padding: 10px 20px; font-size: 16px; margin: 10px; background-color: #ff4800; color: white; border: none; border-radius: 5px; cursor: pointer;">
+              About Me
+            </button>
+          </a>
+
+          <a href="{% url 'projects' %}" style="text-decoration: none;">
+            <button style="padding: 10px 20px; font-size: 16px; margin: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">
+              Projects
+            </button>
+          </a>
+
+          <a href="{% url 'contact' %}" style="text-decoration: none;">
+            <button style="padding: 10px 20px; font-size: 16px; margin: 10px; background-color: #ffc107; color: black; border: none; border-radius: 5px; cursor: pointer;">
+              Contact
+            </button>
+          </a>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+      <h3>Blog Website</h3>
+      <p>A simple blog application built with Django, where users can read and explore blog posts.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Emotion-Based Music Recommender</h3>
+      <p>This project uses a CNN trained on the FER-2013 dataset to detect user emotions and suggest songs accordingly. Built with Python and AI.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>A personal responsive portfolio website developed using HTML, CSS, and Django to showcase my skills, projects, and contact information.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Himanshu. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
